@@ -90,6 +90,7 @@ html, body {
     background: none;
     border: 2px solid  #fff;
 }
+
 /* ----------- POPUP ----------*/
 .header {
     width: 100%;
@@ -103,6 +104,16 @@ html, body {
 .popup-body {
     padding-top: 0;
 }
+/* .popup-body .close {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+}
+.popup-body .close span {
+    color: #0071bc;
+    font-weight: bold;
+} */
+
 .pop-input {
     padding: 0 5px !important;
     border: 2px solid  #b3b3b3 !important;

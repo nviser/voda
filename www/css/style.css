@@ -1,0 +1,119 @@
+/* Empty. Add your own CSS if you like */
+html, body {
+    height: 100%;
+}
+.main {
+    height: 100%;
+    background: url(../img/bottle.png) center center, linear-gradient(to bottom, #1f467d, #b5c6d8); 
+    /* background-image: url(../img/bottle.png);*/
+    background-size: 100%; 
+    background-repeat: no-repeat;
+    position: relative;
+}
+.vol {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    padding-top: 5vh;
+}
+.info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 36px;
+    color: #0071bc;
+    background: #fff;
+    height: 25px;
+    width: 25px;
+}
+.info .fa {
+    margin-left: -1px;
+    margin-top: -5px;
+}
+
+.lang {
+    width: 40px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.lang .lng-circle {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid  #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lang .lng-circle.active {
+    /* border: 2px solid  #f2f2f2;
+    color: #f2f2f2; */
+    border: 2px solid  #cecece;
+    color: #cecece;
+    /* border: 2px solid  #0c0;
+    color: #0c0; */
+}
+.buttons {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.buttons button {
+    width: 10em;
+    height: 50px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    background: #0071bc;
+    padding: 0 10px;
+}
+.buttons button.left {
+    background: none;
+    border: 2px solid  #fff;
+}
+/* ----------- POPUP ----------*/
+.header {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.popup-head h3 {
+    color: #0071bc;
+    font-weight: 900;
+}
+.popup-body {
+    padding-top: 0;
+}
+.pop-input {
+    padding: 0 5px !important;
+    border: 2px solid  #b3b3b3 !important;
+    background: #f2f2f2;
+}
+.pop-input.name-inp {
+    margin-bottom: 10px;
+}
+.popup button.button {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    min-width: 30px;
+}

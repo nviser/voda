@@ -156,14 +156,9 @@ angular.module('starter')
                 }
                 ]
             });
-            /* var alertPopup = $ionicPopup.alert({
-                template: 'Заказ подтвержден'
-            }); */
+           
 
-            myPopup.then(function (res) {
-                /* $state.go('app.main');
-                $scope.inProg = false; */
-            });
+            myPopup.then(function (res) {});
         }
         $scope.showOnline = function () {
             var myPopup = $ionicPopup.show({
@@ -175,46 +170,35 @@ angular.module('starter')
                     text: $scope.lng.send,
                     type: 'button-positive',
                     onTap: function(e) {
-                    if ($scope.user.name 
-                        && $scope.user.phone 
-                        && $scope.user.name.length > 3 
-                        && String($scope.user.phone).length > 9
-                        && $scope.user.mail
-                        && $scope.user.date
-                        && $scope.user.addr
-                        && $scope.user.quan
-                    ) {
-                        //don't allow the user to close unless he enters wifi password
-                        // e.preventDefault();
-                        //alert($scope.user.name + '' + $scope.user.phone);
-                        $scope.user.name = ''; 
-                        $scope.user.phone = '';
-                        $scope.user.mail = ''; 
-                        $scope.user.date = ''; 
-                        $scope.user.addr = '';
-                        $scope.user.quan = '';
-                        console.log($scope.user);
-                        $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
-                    } else {
-                        console.log($scope.user);
-                        // return $scope.data.wifi;
-                        console.log(String($scope.user.phone).length);
-                        console.log(typeof $scope.user.phone);
-                        //alert('Incorrect fields');
-                        $scope.showAlert($scope.lng.err, $scope.lng.errT);
-                    }
+                        if ($scope.user.name 
+                            && $scope.user.phone 
+                            && $scope.user.name.length > 3 
+                            && String($scope.user.phone).length > 9
+                            && $scope.user.mail
+                            && $scope.user.date
+                            && $scope.user.addr
+                            && $scope.user.quan
+                        ) {
+                            //don't allow the user to close unless he enters wifi password
+                            // e.preventDefault();
+                            //alert($scope.user.name + '' + $scope.user.phone);
+                            $scope.user.name = ''; 
+                            $scope.user.phone = '';
+                            $scope.user.mail = ''; 
+                            $scope.user.date = ''; 
+                            $scope.user.addr = '';
+                            $scope.user.quan = '';
+                            console.log($scope.user);
+                            $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
+                        } else {
+                            $scope.showAlert($scope.lng.err, $scope.lng.errT);
+                        }
                     }
                 }
                 ]
             });
-            /* var alertPopup = $ionicPopup.alert({
-                template: 'Заказ подтвержден'
-            }); */
 
-            myPopup.then(function (res) {
-                /* $state.go('app.main');
-                $scope.inProg = false; */
-            });
+            myPopup.then(function (res) {});
         }
 
         $scope.showAlert = function(title, text) {
@@ -224,7 +208,6 @@ angular.module('starter')
             });
 
             alertPopup.then(function(res) {
-                
             });
         };
 

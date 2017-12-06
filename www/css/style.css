@@ -128,3 +128,59 @@ html, body {
     border-radius: 10px;
     min-width: 30px;
 }
+
+/* ----------- MODAL ----------*/
+.cont-wrap {
+    color: #333;
+}
+.plant-img {
+    width: 100%;
+}
+.info-header {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+}
+.info-ul {
+    width: 200px;
+    margin: 0 auto;
+}
+.info-ul li {
+    text-align: right;
+    font-size: 18px;
+    padding: 5px 0;
+    color: #333;
+}
+.info-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.fb-wrap {
+    background: #0071bc;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+.fb-wrap .fa {
+    color: #fff;
+}
+.back-btn {
+    border: none;
+    background: #0071bc;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin: 20px 0;
+}

@@ -1,5 +1,5 @@
 angular.module('starter')
-    .controller('mainCtrl', ['$scope', '$rootScope', '$ionicPopup', function ($scope, rootScope, $ionicPopup) {
+    .controller('mainCtrl', ['$scope', '$rootScope', '$ionicPopup','$ionicModal', function ($scope, rootScope, $ionicPopup, $ionicModal) {
         console.log('main worl');
        $scope.user= {};
         $scope.switchActive = function () {
@@ -107,5 +107,21 @@ angular.module('starter')
                 
             });
         };
+
+        $ionicModal.fromTemplateUrl('../templates/info.html', {
+            scope: $scope
+        }).then(function (modal) {
+            $scope.modal = modal;
+        });
+
+        
+        $scope.showInfo = function () {
+            $scope.modal.show();
+        };
+
+        $scope.closeInfo = function () {
+            $scope.modal.hide();
+        };
+
 
     }]);

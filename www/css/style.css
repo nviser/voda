@@ -28,8 +28,8 @@ html, body {
     font-size: 36px;
     color: #0071bc;
     background: #fff;
-    height: 25px;
-    width: 25px;
+    height: 27px;
+    width: 29px;
 }
 .info .fa {
     margin-left: -1px;
@@ -60,12 +60,8 @@ html, body {
     align-items: center;
 }
 .lang .lng-circle.active {
-    /* border: 2px solid  #f2f2f2;
-    color: #f2f2f2; */
     border: 2px solid  #cecece;
-    color: #cecece;
-    /* border: 2px solid  #0c0;
-    color: #0c0; */
+    color: #cecece; 
 }
 .buttons {
     position: absolute;
@@ -75,8 +71,7 @@ html, body {
     justify-content: space-around;
 }
 .buttons button {
-    width: 10em;
-    height: 50px;
+    width: 9em;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
@@ -84,7 +79,11 @@ html, body {
     text-transform: uppercase;
     border: none;
     background: #0071bc;
-    padding: 0 10px;
+    padding: 7px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.2;
+
 }
 .buttons button.left {
     background: none;
@@ -100,9 +99,11 @@ html, body {
 .popup-head h3 {
     color: #0071bc;
     font-weight: 900;
+    font-size: 16px;
 }
 .popup-body {
     padding-top: 0;
+    font-size: 16px;
 }
 /* .popup-body .close {
     position: absolute;
@@ -127,6 +128,8 @@ html, body {
     -moz-border-radius: 10px;
     border-radius: 10px;
     min-width: 30px;
+    font-size: 16px;
+    font-weight: 900;
 }
 
 /* ----------- MODAL ----------*/
@@ -161,17 +164,20 @@ html, body {
 }
 .fb-wrap {
     background: #0071bc;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin: 0 auto;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 .fb-wrap .fa {
     color: #fff;
+    font-size: 20px;
 }
 .back-btn {
     border: none;
@@ -183,4 +189,45 @@ html, body {
     border-radius: 10px;
     padding: 8px 10px;
     margin: 20px 0;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.ionic_datepicker_popup .popup-body .selected_date_full {
+    background-color: #0071bc !important;
+}
+.ionic_datepicker_popup .selected_date {
+    background-color: #0071bc !important;
+}
+.ionic_datepicker_popup .popup-buttons button {
+    background-color: #0071bc !important;
+
+}
+.ionic_datepicker_popup .popup-buttons button {
+    background-color: #0071bc !important;
+}
+.ionic_datepicker_popup .popup-body .button-clear {
+    color: #0071bc !important;
+
+}
+.ionic_datepicker_popup .popup-body .month_select, .ionic_datepicker_popup .popup-body .year_select {
+    border-bottom-color: #0071bc !important;
+}
+.ionic_datepicker_popup .popup-body .month_select:after, .ionic_datepicker_popup .popup-body .year_select:after {
+    color: #0071bc !important;
+}
+.ionic_timepicker_popup .heading {
+    background-color: #0071bc !important;
+}
+.ionic_timepicker_popup .button_set, .ionic_timepicker_popup .button_close {
+    background-color: #0071bc !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+.ionic_datepicker_popup .today {
+    border: 1px solid  #0071b0 !important;
+}
+.ionic_datepicker_popup .popup-body {
+    padding-top: 10px !important;
 }

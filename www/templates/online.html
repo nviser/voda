@@ -1,12 +1,12 @@
-<label for="name1">Имя (Имя Фамилия)</label>
-<input type="text" id="name1" class="pop-input name-inp" ng-model="user.name" placeholder="Введите имя (Введите Имя и Фамилию)">
-<label for="phone2">Телефон</label>
-<input type="number" id="phone2" class="pop-input name-inp" ng-model="user.phone" placeholder="Введите номер телефона">
-<label for="mail">Е-меил</label>
-<input type="email" id="mail" class="pop-input name-inp" ng-model="user.mail" placeholder="Введите е-меил">
-<label for="date">Дата и время</label>
-<input type="time" id="date" class="pop-input name-inp" ng-model="user.date" placeholder="Выберите удобное время и дату доставки">
-<label for="addr">Адрес</label>
-<input type="text" id="addr" class="pop-input name-inp" ng-model="user.addr" placeholder="Введите адрес доставки">
-<label for="quan">Кол-во</label>
-<input type="number" id="quan" class="pop-input" ng-model="user.quan" placeholder="Введите количество">
+<label for="name1">{{lng.name}}</label>
+<input type="text" id="name1" class="pop-input name-inp" ng-model="user.name" placeholder="{{lng.nameP}}">
+<label for="phone2">{{lng.phone}}</label>
+<input type="number" id="phone2" class="pop-input name-inp" ng-model="user.phone" placeholder="{{lng.phoneP}}">
+<label for="mail">{{lng.mail}}</label>
+<input type="email" id="mail" class="pop-input name-inp" ng-model="user.mail" placeholder="{{lng.mailP}}">
+<label for="date">{{lng.date}}</label>
+<input type="text" id="date" class="pop-input name-inp" ng-model="user.date" ng-click="chooseDate()" placeholder="{{lng.dateP}}" readonly>
+<label for="addr">{{lng.addr}}</label>
+<input type="text" id="addr" class="pop-input name-inp" ng-model="user.addr" placeholder="{{lng.addrP}}">
+<label for="quan">{{lng.quan}}</label>
+<input type="number" id="quan" class="pop-input" ng-model="user.quan" placeholder="{{lng.quanP}}">

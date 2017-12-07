@@ -1,0 +1,36 @@
+<resources>
+    <string name="lang">az</string>
+    <string name="app_name">Kehrizsu</string>
+    <string name="callback">BİZ SİZƏ\nZƏNG EDƏK</string>
+    <string name="callback_n">BİZ SİZƏ ZƏNG EDƏK</string>
+    <string name="order">ONLINE\nSİFARİŞ</string>
+    <string name="order_n">ONLINE SİFARİŞ</string>
+    <string name="back">GERİYƏ QAYIT</string>
+    <string name="contacts">BİZNƏN ƏLAQƏ</string>
+    <string name="dialog_callback">ONLINE SİFARİŞ</string>
+    <string name="send">GÖNDƏR</string>
+    <string name="name">Ad, Soyad</string>
+    <string name="hint_name">Adınızı və Soyadınızı daxil edin</string>
+    <string name="phone">Telefon</string>
+
+    <string name="hint_phone">Nömrənizi daxil edin</string>
+    <string name="count">Miqdar</string>
+    <string name="hint_count">Sayı daxil edin</string>
+    <string name="adres">Ünvan</string>
+    <string name="hint_adres">Çatdırılma ünvanı daxil edin</string>
+    <string name="time">Tarix və vaxt</string>
+    <string name="tel">tel.:+994 12 408 0555</string>
+    <string name="_994_50_682_0555">mob.:+994 50 682 0555</string>
+    <string name="promo_time">Çatdırılma tarixi və vaxtı daxil edin</string>
+    <string name="email">E-mail</string>
+    <string name="email_2">E-mail</string>
+    <string name="time_2">Tarix və vaxt</string>
+    <string name="phone_2">Telefon</string>
+    <string name="name_2">Ad, Soyad</string>
+    <string name="count_2">Miqdar</string>
+    <string name="adres_2">Ünvan</string>
+    <string name="edit">REDAKTƏ ET</string>
+
+    <string name="promo_email">E-mail daxil edin</string>
+    <string name="done">Uğurla göndərildi</string>
+</resources>

@@ -170,9 +170,8 @@ html, body {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding-top: 8px;
     margin-bottom: 20px;
 }
 .fb-wrap .fa {

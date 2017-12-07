@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="lang">ru</string>
+    <string name="app_name">Kehrizsu</string>
+    <string name="callback">ОБРАТНЫЙ\nЗВОНОК</string>
+    <string name="callback_n">ОБРАТНЫЙ ЗВОНОК</string>
+    <string name="order">ЗАКАЗАТЬ\nONLINE</string>
+    <string name="order_n">ЗАКАЗАТЬ ONLINE</string>
+    <string name="back">ВЕРНУТЬСЯ НАЗАД</string>
+    <string name="contacts">НАШИ КОНТАКТЫ</string>
+    <string name="dialog_callback">ОБРАТНЫЙ ЗВОНОК</string>
+    <string name="send">ОТПРАВИТЬ</string>
+    <string name="name">Имя (Имя Фамилия)</string>
+    <string name="hint_name">Введите имя (Введите Имя и Фамилию)</string>
+    <string name="phone">Телефон</string>
+    <string name="hint_phone">Введите номер телефона</string>
+    <string name="count">Кол-во</string>
+    <string name="hint_count">Введите количество</string>
+    <string name="adres">Адрес</string>
+    <string name="hint_adres">Введите адрес доставки</string>
+    <string name="time">Дата и время</string>
+    <string name="tel">тел.:+994 12 408 0555</string>
+    <string name="_994_50_682_0555">моб.:+994 50 682 0555</string>
+    <string name="promo_time">Выберите удобное время и дату  доставки</string>
+    <string name="email">Е-меил</string>
+    <string name="promo_email">Введите ваш е-меил</string>
+    <string name="email_2">E-mail</string>
+    <string name="time_2">Tarix və vaxt</string>
+    <string name="phone_2">Telefon</string>
+    <string name="name_2">Ad (Ad Soyad)</string>
+    <string name="count_2">Miqdar</string>
+    <string name="adres_2">Ünvan</string>
+    <string name="edit">РЕДАКТИРОВАТЬ</string>
+    <string name="done">Отправленно</string>
+
+
+</resources>

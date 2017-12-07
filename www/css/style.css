@@ -191,6 +191,13 @@ html, body {
     font-size: 16px;
     font-weight: 900;
 }
+.button.button-positive {
+    background-color: #0071bc;
+}
+.button.button-positive.activated {
+    border-color: #005e9c;
+    background-color: #005e9c;
+}
 
 .ionic_datepicker_popup .popup-body .selected_date_full {
     background-color: #0071bc !important;
@@ -230,7 +237,7 @@ html, body {
 .ionic_datepicker_popup .popup-body {
     padding-top: 10px !important;
 }
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) {
     .main {
         position: relative;
     }
@@ -246,4 +253,4 @@ html, body {
         top: 0;
         left: 0;     
     }
-}
+} */

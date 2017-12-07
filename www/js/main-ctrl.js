@@ -55,7 +55,7 @@ angular.module('starter')
         inputTime: 50400,   //Optional
         format: 24,         //Optional
         step: 1,           //Optional
-        setLabel: 'Задать'    //Optional
+        // setLabel: 'Задать'    //Optional
     };
 
     $scope.openTimePicker = function() {

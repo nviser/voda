@@ -1,5 +1,5 @@
 angular.module('starter')
-    .controller('mainCtrl', ['$scope', '$rootScope', '$ionicPopup','$ionicModal', 'ionicDatePicker', 'ionicTimePicker', function ($scope, rootScope, $ionicPopup, $ionicModal, ionicDatePicker, ionicTimePicker) {
+    .controller('mainCtrl', ['$scope', '$rootScope', '$ionicPopup','$ionicModal', 'ionicDatePicker', 'ionicTimePicker', 'SERVICE', function ($scope, rootScope, $ionicPopup, $ionicModal, ionicDatePicker, ionicTimePicker, SERVICE) {
    $scope.user= {};
     var ipObj2 = {
         callback: function(val) {
@@ -13,7 +13,7 @@ angular.module('starter')
             var month = ('0' + newMonth).slice(-2);
             var fullYear = new Date(val).getFullYear();
             console.log("fullYear", fullYear);
-            $scope.user.date = date + "." + month + "." + fullYear;
+            $scope.user.date = date + "/" + month + "/" + fullYear;
             console.log("$scope.orderDate", $scope.orderDate);
             $scope.openTimePicker();
         },
@@ -49,7 +49,7 @@ angular.module('starter')
             var min = String(selectedTime.getUTCMinutes()).length == 1 ? selectedTime.getUTCMinutes() + '0' :  selectedTime.getUTCMinutes();
             $scope.orderTime = selectedTime.getUTCHours() + ":" + min;
             //console.log(min);
-            $scope.user.date = $scope.user.date + ' ' + $scope.orderTime;
+            $scope.user.date = $scope.user.date + ' - ' + $scope.orderTime;
         }
         },
         inputTime: 50400,   //Optional
@@ -66,12 +66,10 @@ angular.module('starter')
         $scope.switchAz = function () {
             $scope.isActivated = true;
              $scope.lng = $scope.languages.az;
-             console.log($scope.lng);
         }
         $scope.switchRu = function () {
             $scope.isActivated = false;
              $scope.lng = $scope.languages.ru;
-             console.log($scope.lng);
         }
 
         $scope.languages = {
@@ -142,26 +140,22 @@ angular.module('starter')
                     text: $scope.lng.send,
                     type: 'button-positive',
                     onTap: function(e) {
-                    if ($scope.user.name && $scope.user.phone && $scope.user.name.length > 3 && String($scope.user.phone).length > 9) {
-                        //don't allow the user to close unless he enters wifi password
-                        // e.preventDefault();
-                        //alert($scope.user.name + '' + $scope.user.phone);
-                        $scope.user.name = ''; 
-                        $scope.user.phone = '';
-                        $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
-                    } else {
-                        // return $scope.data.wifi;
-                        console.log(String($scope.user.phone).length);
-                        console.log(typeof $scope.user.phone);
-                        //alert('Incorrect fields');
-                        $scope.showAlert($scope.lng.err, $scope.lng.errT);
-                    }
+                        if ($scope.user.name && $scope.user.phone && $scope.user.name.length > 3 && String($scope.user.phone).length > 9) {
+                            
+                            SERVICE.callback_service($scope.user.name, $scope.user.phone, $scope.user.mail, $scope.user.date, $scope.user.addr, $scope.user.quan)
+                                    .then(function(){
+                                        $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
+                                    });
+                            $scope.user.name = ''; 
+                            $scope.user.phone = '';
+
+                        } else {
+                            $scope.showAlert($scope.lng.err, $scope.lng.errT);
+                        }
                     }
                 }
                 ]
             });
-           
-
             myPopup.then(function (res) {});
         }
         $scope.showOnline = function () {
@@ -183,17 +177,17 @@ angular.module('starter')
                             && $scope.user.addr
                             && $scope.user.quan
                         ) {
-                            //don't allow the user to close unless he enters wifi password
-                            // e.preventDefault();
-                            //alert($scope.user.name + '' + $scope.user.phone);
+                            SERVICE.booking_service($scope.user.name, $scope.user.phone, $scope.user.mail, $scope.user.date, $scope.user.addr, $scope.user.quan)
+                                    .then(function(){
+                                        $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
+                                    });
                             $scope.user.name = ''; 
                             $scope.user.phone = '';
                             $scope.user.mail = ''; 
                             $scope.user.date = ''; 
                             $scope.user.addr = '';
                             $scope.user.quan = '';
-                            console.log($scope.user);
-                            $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
+                          
                         } else {
                             $scope.showAlert($scope.lng.err, $scope.lng.errT);
                         }

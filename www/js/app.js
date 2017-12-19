@@ -20,6 +20,7 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'ionic-timepicker', 'ngC
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
   });
 
   $rootScope.showAlert = function (text) {
@@ -27,4 +28,6 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'ionic-timepicker', 'ngC
           template: text
       });
   };
+
+  
 })

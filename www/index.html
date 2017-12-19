@@ -51,6 +51,15 @@
       <div class="info">
         <i class="fa fa-info-circle" aria-hidden="true" ng-click="showInfo()"></i>
       </div>
+        <div style="position:absolute; top:100;">
+          <ul>
+            <li>{{testText}}</li>
+            <li>{{manufacturer}}</li>
+            <li>{{model}}</li>
+            <li>{{platform}}</li>
+            <li>{{uuid}}</li>
+          </ul>
+        </div>
 
       <div class="lang">
         <div class="lng-circle" ng-class="{ active : !isActivated}" ng-click="switchAz()">az</div>
@@ -66,12 +75,5 @@
         <!-- </div> -->
       </div>
     </div>
-    <!-- <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane> -->
   </body>
 </html>

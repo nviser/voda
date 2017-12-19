@@ -1,5 +1,5 @@
 angular.module('starter')
-    .controller('mainCtrl', ['$scope', '$rootScope', '$ionicPopup','$ionicModal', 'ionicDatePicker', 'ionicTimePicker', 'SERVICE', function ($scope, rootScope, $ionicPopup, $ionicModal, ionicDatePicker, ionicTimePicker, SERVICE) {
+    .controller('mainCtrl', ['$scope', '$rootScope', '$ionicPopup','$ionicModal', 'ionicDatePicker', 'ionicTimePicker', 'SERVICE', '$ionicPlatform', '$cordovaDevice', function ($scope, rootScope, $ionicPopup, $ionicModal, ionicDatePicker, ionicTimePicker, SERVICE, $ionicPlatform, $cordovaDevice) {
    $scope.user= {};
     var ipObj2 = {
         callback: function(val) {
@@ -146,8 +146,8 @@ angular.module('starter')
                                     .then(function(){
                                         $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
                                     });
-                            $scope.user.name = ''; 
-                            $scope.user.phone = '';
+                            /* $scope.user.name = ''; 
+                            $scope.user.phone = ''; */
 
                         } else {
                             $scope.showAlert($scope.lng.err, $scope.lng.errT);
@@ -181,12 +181,12 @@ angular.module('starter')
                                     .then(function(){
                                         $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
                                     });
-                            $scope.user.name = ''; 
+                            /* $scope.user.name = ''; 
                             $scope.user.phone = '';
                             $scope.user.mail = ''; 
                             $scope.user.date = ''; 
                             $scope.user.addr = '';
-                            $scope.user.quan = '';
+                            $scope.user.quan = ''; */
                           
                         } else {
                             $scope.showAlert($scope.lng.err, $scope.lng.errT);
@@ -224,5 +224,14 @@ angular.module('starter')
             $scope.modal.hide();
         };
 
-
+        $ionicPlatform.ready(function() {
+            $scope.$apply(function() {
+                var device = $cordovaDevice.getDevice();
+                    $scope.manufacturer = device.manufacturer;
+                    $scope.model = device.model;
+                    $scope.platform = device.platform;
+                    $scope.uuid = device.uuid; 
+                    $scope.testText = "Test TEXT"; 
+            });
+        });
     }]);

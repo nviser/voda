@@ -3,7 +3,7 @@ angular.module('starter')
     return {
         CALLB: 'http://www.dev-topsu.ru/order_kahariz/feedback.php',
         ORDER: 'http://www.dev-topsu.ru/order_kahariz/order.php',
-        version: '1.00'
+        version: '2.00'
     }
   })())
   .config(['$httpProvider', function ($httpProvider) {

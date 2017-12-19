@@ -45,17 +45,14 @@ angular.module('starter')
             console.log('Time not selected');
         } else {
             var selectedTime = new Date(val * 1000);
-            //console.log('Selected epoch is : ', val, 'and the time is ', selectedTime.getUTCHours(), 'H :', selectedTime.getUTCMinutes(), 'M');
             var min = String(selectedTime.getUTCMinutes()).length == 1 ? selectedTime.getUTCMinutes() + '0' :  selectedTime.getUTCMinutes();
             $scope.orderTime = selectedTime.getUTCHours() + ":" + min;
-            //console.log(min);
             $scope.user.date = $scope.user.date + ' - ' + $scope.orderTime;
         }
         },
         inputTime: 50400,   //Optional
         format: 24,         //Optional
         step: 10,           //Optional
-        // setLabel: 'Задать'    //Optional
     };
 
     $scope.openTimePicker = function() {
@@ -142,13 +139,10 @@ angular.module('starter')
                     onTap: function(e) {
                         if ($scope.user.name && $scope.user.phone && $scope.user.name.length > 3 && String($scope.user.phone).length > 9) {
                             
-                            SERVICE.callback_service($scope.user.name, $scope.user.phone, $scope.user.mail, $scope.user.date, $scope.user.addr, $scope.user.quan)
+                            SERVICE.callback_service($scope.user.name, $scope.user.phone, $scope.udid)
                                     .then(function(){
                                         $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
                                     });
-                            /* $scope.user.name = ''; 
-                            $scope.user.phone = ''; */
-
                         } else {
                             $scope.showAlert($scope.lng.err, $scope.lng.errT);
                         }
@@ -177,17 +171,10 @@ angular.module('starter')
                             && $scope.user.addr
                             && $scope.user.quan
                         ) {
-                            SERVICE.booking_service($scope.user.name, $scope.user.phone, $scope.user.mail, $scope.user.date, $scope.user.addr, $scope.user.quan)
+                            SERVICE.booking_service($scope.user.name, $scope.user.phone, $scope.user.mail, $scope.user.date, $scope.user.addr, $scope.user.quan, $scope.udid)
                                     .then(function(){
                                         $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
-                                    });
-                            /* $scope.user.name = ''; 
-                            $scope.user.phone = '';
-                            $scope.user.mail = ''; 
-                            $scope.user.date = ''; 
-                            $scope.user.addr = '';
-                            $scope.user.quan = ''; */
-                          
+                                    });                          
                         } else {
                             $scope.showAlert($scope.lng.err, $scope.lng.errT);
                         }
@@ -227,11 +214,7 @@ angular.module('starter')
         $ionicPlatform.ready(function() {
             $scope.$apply(function() {
                 var device = $cordovaDevice.getDevice();
-                    $scope.manufacturer = device.manufacturer;
-                    $scope.model = device.model;
-                    $scope.platform = device.platform;
-                    $scope.uuid = device.uuid; 
-                    $scope.testText = "Test TEXT"; 
+                    $scope.udid = device.uuid; 
             });
-        });
+        }); 
     }]);

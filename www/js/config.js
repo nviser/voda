@@ -1,8 +1,8 @@
 angular.module('starter')
   .constant('ROUTES', (function () {
     return {
-        CALLB: 'http://www.dev-topsu.ru/order_kahariz/feedback.php',
-        ORDER: 'http://www.dev-topsu.ru/order_kahariz/order.php',
+        CALLB: 'http://kehrizsu.az/order_kahariz/feedback.php',
+        ORDER: 'http://kehrizsu.az/order_kahariz/order.php',
         version: '2.00'
     }
   })())

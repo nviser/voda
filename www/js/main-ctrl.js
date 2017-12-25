@@ -137,7 +137,7 @@ angular.module('starter')
                     text: $scope.lng.send,
                     type: 'button-positive',
                     onTap: function(e) {
-                        if ($scope.user.name && $scope.user.phone && $scope.user.name.length > 3 && String($scope.user.phone).length > 9) {
+                        if ($scope.user.name && $scope.user.phone && $scope.user.name.length > 3 /* && String($scope.user.phone).length > 9 */) {
                             
                             SERVICE.callback_service($scope.user.name, $scope.user.phone, $scope.udid)
                                     .then(function(){
@@ -165,7 +165,7 @@ angular.module('starter')
                         if ($scope.user.name 
                             && $scope.user.phone 
                             && $scope.user.name.length > 3 
-                            && String($scope.user.phone).length > 9
+                            /* && String($scope.user.phone).length > 9 */
                             && $scope.user.mail
                             && $scope.user.date
                             && $scope.user.addr

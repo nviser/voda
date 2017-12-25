@@ -3,7 +3,7 @@ angular.module('starter')
     return {
         CALLB: 'http://kehrizsu.az/order_kahariz/feedback.php',
         ORDER: 'http://kehrizsu.az/order_kahariz/order.php',
-        version: '2.00'
+        version: '3.00'
     }
   })())
   .config(['$httpProvider', function ($httpProvider) {

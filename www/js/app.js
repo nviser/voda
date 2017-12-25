@@ -5,7 +5,7 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'ionic-timepicker', 'ngC
     if(window.cordova && window.cordova.plugins.Keyboard) {
 
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
+      cordova.plugins.Keyboard.disableScroll(false);
       
     }
     if(window.StatusBar) {

@@ -95,7 +95,7 @@ angular.module('starter')
                             sent: 'ОТПРАВЛЕНО',
                             err: 'ОШИБКА',
                             sentT: 'Ожидайте, Вам перезвонят в ближайшее время',
-                            errT: 'Введите корректные данные!'
+                            errT: 'Заполните все поля!'
                         },
                         az: {
                             callback: 'BİZ SİZƏ',
@@ -122,7 +122,7 @@ angular.module('starter')
                             sent: 'DEPARTED',
                             err: 'ERROR',
                             sentT: 'Tezliklə geri çağırılmasını gözləyirik',
-                            errT: 'Xahiş edirik doğru məlumatları daxil edin!'
+                            errT: 'Bütün sahələri doldurun!'
                         }
         };
 
@@ -144,6 +144,7 @@ angular.module('starter')
                                         $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
                                     });
                         } else {
+                            e.preventDefault();
                             $scope.showAlert($scope.lng.err, $scope.lng.errT);
                         }
                     }
@@ -176,6 +177,7 @@ angular.module('starter')
                                         $scope.showAlert($scope.lng.sent, $scope.lng.sentT);
                                     });                          
                         } else {
+                            e.preventDefault();
                             $scope.showAlert($scope.lng.err, $scope.lng.errT);
                         }
                     }

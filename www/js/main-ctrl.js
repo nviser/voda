@@ -1,5 +1,5 @@
 angular.module('starter')
-    .controller('mainCtrl', ['$scope', '$rootScope', '$ionicPopup','$ionicModal', 'ionicDatePicker', 'ionicTimePicker', 'SERVICE', '$ionicPlatform', '$cordovaDevice', function ($scope, rootScope, $ionicPopup, $ionicModal, ionicDatePicker, ionicTimePicker, SERVICE, $ionicPlatform, $cordovaDevice) {
+    .controller('mainCtrl', ['$scope', '$rootScope', '$ionicPopup','$ionicModal', 'ionicDatePicker', 'ionicTimePicker', 'SERVICE', '$ionicPlatform', '$cordovaDevice', 'IonicClosePopupService', function ($scope, rootScope, $ionicPopup, $ionicModal, ionicDatePicker, ionicTimePicker, SERVICE, $ionicPlatform, $cordovaDevice, IonicClosePopupService) {
    $scope.user= {};
     var ipObj2 = {
         callback: function(val) {
@@ -152,6 +152,7 @@ angular.module('starter')
                 ]
             });
             myPopup.then(function (res) {});
+            IonicClosePopupService.register(myPopup);
         }
         $scope.showOnline = function () {
             var myPopup = $ionicPopup.show({
@@ -186,6 +187,7 @@ angular.module('starter')
             });
 
             myPopup.then(function (res) {});
+            IonicClosePopupService.register(myPopup);
         }
 
         $scope.showAlert = function(title, text) {

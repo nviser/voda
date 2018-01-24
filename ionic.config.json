@@ -4,5 +4,8 @@
   "integrations": {
     "gulp": {}
   },
-  "type": "ionic1"
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
 }

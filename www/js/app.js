@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ionic-datepicker', 'ionic-timepicker', 'ngCordova'])
+angular.module('starter', ['ionic', 'ionic-datepicker', 'ionic-timepicker', 'ngCordova', 'ionic.closePopup'])
 
 .run(function($rootScope, $ionicPlatform, $ionicPopup) {
   $ionicPlatform.ready(function() {

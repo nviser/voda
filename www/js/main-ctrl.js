@@ -27,7 +27,7 @@ angular.module('starter')
             new Date(1439676000000)
         ],
         from: new Date(),
-        to: new Date(2018, 12, 31),
+        to: new Date(2025, 12, 31),
         inputDate: new Date(),
         mondayFirst: true,
         disableWeekdays: [],
@@ -115,7 +115,7 @@ angular.module('starter')
                             addrP: 'Çatdırılma ünvanı daxil edin',
                             quan: 'Miqdar',
                             quanP: 'Sayı daxil edin',
-                            contacts: 'BİZNƏN ƏLAQƏ',
+                            contacts: 'BİZİMLƏ ƏLAQƏ',
                             tel: 'tel',
                             mob: 'mob',
                             back: 'GERİYƏ QAYIT',
